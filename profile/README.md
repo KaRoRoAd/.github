@@ -112,17 +112,28 @@ git config user.email
 
 <details>
    <summary>
-      GitFlow
+      GitHub Flow
    </summary>
 
 ## GUI
 - [Sourcetree](https://www.sourcetreeapp.com/) - klient dla OSX/Windowsa, który jest wyśmienitą nakładką graficzną dla gita
   
 ## Gałęzie
-Pierwsza rzecz, którą należy zrobić, aby wdrożyć model Git Flow, to odpowiednio uporządkować gałęzie w swoim repozytorium. W tym przypadku będziemy operować na pięciu rodzajach branchy:
+Pierwsza rzecz, którą należy zrobić, aby wdrożyć model [GitHub Flow](https://www.frontstack.pl/blog/praca-z-git-github-flow), to odpowiednio uporządkować gałęzie w swoim repozytorium. W tym przypadku będziemy operować na dwóch rodzajach branchy:
 
-- __master__ – produkcyjna wersja aplikacji. Do tego brancha będziemy mergować tylko te zmiany, które już zostały wydane na produkcję oraz krytyczne hotfixy.
-- __hotfix__ – jedyna gałąź bazująca ma masterze. To właśnie ona służy do szybkiego naprawiania krytycznych błędów występujących na produkcji.
-- __develop__ – gałąź ta jest „nieoficjalnym” masterem podczas pracy. Z tego brancha programiści tworzą swoje gałęzie robocze i do niego mergują (rebase-ują) swoją pracę. Gdy praca nad wszystkimi funkcjonalnościami w danym etapie jest gotowa, branch ten jest mergowany do gałęzi „master”.
-- __gałęzie robocze (features / feature branch)__ – na tych gałęziach pracujemy na co dzień i tworzymy nowe funkcjonalności.
+- __main__ –  na tym branchu znajduje się produkcyjna i aktualna wersja aplikacji. Gałąź ta jest zawsze gotowa do tego, aby w razie potrzeby mogła być deployowana na serwery produkcyjne. To z tej gałęzi programiści będą tworzyć swoje branche i do tej gałęzi mergują swoje zmiany.
+- __gałęzie robocze (features / feature branch)__ – na tych gałęziach tworzymy nowe funkcjonalności oraz naprawiamy wszelkiego rodzaju błędy w aplikacji.
+
+  ## Flow
+1. Stworzenie brancha
+   Naszą pracę zawsze zaczynamy wychodząc z master brancha. To w masterze znajduje się przetestowany i działający kod. Dzięki temu wiemy, że pracujemy zawsze na aktualnej wersji aplikacji.
+2. Praca nad nową funkcjonalnością
+   W momencie, gdy jesteśmy już na swoim branchu, możemy zacząć pracę nad zadaniem. Regularnie commitujemy swoją pracę i nie zapominamy o tym, aby aktualizować swoją gałąź o nowe commity z mastera.
+3. Pull Request
+   Gdy skończymy już nasze zadanie i chcemy je umieścić w masterze, tworzymy tzw. Pull Request. Powiedzieliśmy sobie wcześniej, że master jest gałęzią, z której w każdym momencie możemy wykonać deploy na produkcję. W takim przypadku kod tam się znajdujący musi być dokładnie zweryfikowany przez pozostałych członków zespołu. Pull Request jest miejscem, gdzie możemy dokładnie przedyskutować wprowadzone przez nas rozwiązania.
+   W przypadku, gdy podczas omawiania PR-a wyjdą jakieś błędy, które wymagają poprawki, to poprawiamy je na naszej gałęzi roboczej. Wszystkie przyszłe commity, które wyślemy do zdalnego repozytorium, będą aktualizowały już raz utworzony PR.
+4. Merge i deploy
+   Gdy nasze zmiany zostały już szczegółowo skonsultowane z pozostałymi członkami zespołu, przyszedł czas na pokazanie ich światu. Merge zaakceptowanego PR-a do mastera i deploy mastera. Sposób trochę mniej bezpieczny, ale dzięki temu główna gałąź projektu zostaje szybko zaktualizowana o nowe zmiany. Taki proces również dużo łatwiej zautomatyzować za pomocą narzędzi CI/CD. Wszelkie zmiany w masterze mogą powodować automatyczny deploy na produkcję. Problemy wynikłe po deployu naprawiamy kolejnym PR-em. Jeżeli coś pójdzie naprawdę bardzo źle, to mamy przecież Gita – revert bądź reset mogą okazać się pomocne 😉
+
 </details>
+
