@@ -137,3 +137,23 @@ Pierwsza rzecz, którą należy zrobić, aby wdrożyć model [GitHub Flow](https
 
 </details>
 
+<details>
+   <summary>
+      Priorytetyzacja wymagań MoSCoW w projektach IT
+   </summary>
+   
+   MoSCoW to technika priorytetyzacji wykorzystywana podczas zarządzania projektami oraz przy tworzeniu analiz biznesowych projektów informatycznych. Metoda MoSCoW pozwala wypracować wzajemne zrozumienie pomiędzy wszystkimi uczestnikami  (interesariuszami) projektu i taki też jest jej cel.
+
+   Gdy wszystkie wymagania mają tę samą wysoką wagę, to żadne z nich nie jest ważniejsze od pozostałych. Należy nadać odpowiednie priorytety, tak aby jak najwcześniej pojawiły się funkcjonalności, które przyniosą jak największe korzyści biznesowe.
+
+   Każde wymaganie funkcjonalne ma określony priorytet MoSCoW. Wymagania definiuje się w dokumencie opisującym zakres funkcjonalny systemu wraz z kryteriami akceptacyjnymi. Zgodnie z tą metodologią zadania przypisywane są do kategorii M (Must), S (Should), C (Could) i W (Won’t), od których pochodzi nazwa modelu MoSCoW.
+
+- __Must have__ - Priorytet M (must) opisuje krytyczne wymagania, które muszą być spełnione, bo bez nich cały projekt nie zakończy się powodzeniem. Wymienione poniżej wymagania oznaczone symbolami S, C i W można zrealizować w przyszłych fazach cyklu życia projektu.
+
+- __Should have__ - Priorytet S (should) opisuje wymagania, które powinny być spełnione, jednak bez których projekt może funkcjonować.
+
+- __Could have__ - Priorytet C (could) reprezentuje wymagania, które dobrze, gdyby były, jednak nie są konieczne do funkcjonowania projektu.
+
+- __Won’t have__ - Priorytet W (won’t) to zakres reprezentujący wymagania, których wiemy, że w danym projekcie nie będzie. Rzadziej wykorzystywany w celu dobitnego podkreślenia braku danej funkcjonalności. Domyślnie, jeśli wymaganie nie jest ustalone, to należy uznać, że nie będzie realizowane.
+
+</details>
