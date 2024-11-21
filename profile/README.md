@@ -108,3 +108,21 @@ git config user.name
 git config user.email
 ```
 </details>
+
+
+<details>
+   <summary>
+      GitFlow
+   </summary>
+
+## GUI
+- [Sourcetree](https://www.sourcetreeapp.com/) - klient dla OSX/Windowsa, który jest wyśmienitą nakładką graficzną dla gita
+  
+## Gałęzie
+Pierwsza rzecz, którą należy zrobić, aby wdrożyć model Git Flow, to odpowiednio uporządkować gałęzie w swoim repozytorium. W tym przypadku będziemy operować na pięciu rodzajach branchy:
+
+- __master__ – produkcyjna wersja aplikacji. Do tego brancha będziemy mergować tylko te zmiany, które już zostały wydane na produkcję oraz krytyczne hotfixy.
+- __hotfix__ – jedyna gałąź bazująca ma masterze. To właśnie ona służy do szybkiego naprawiania krytycznych błędów występujących na produkcji.
+- __develop__ – gałąź ta jest „nieoficjalnym” masterem podczas pracy. Z tego brancha programiści tworzą swoje gałęzie robocze i do niego mergują (rebase-ują) swoją pracę. Gdy praca nad wszystkimi funkcjonalnościami w danym etapie jest gotowa, branch ten jest mergowany do gałęzi „master”.
+- __gałęzie robocze (features / feature branch)__ – na tych gałęziach pracujemy na co dzień i tworzymy nowe funkcjonalności.
+</details>
