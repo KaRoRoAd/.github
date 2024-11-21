@@ -1,13 +1,14 @@
+<details>
+   <summary>
+      Konfiguracja dwóch kont na GitHubie
+   </summary>
 
-# Konfiguracja dwóch kont na GitHubie
+# 1. Utwórz klucze SSH dla każdego konta
+   Każde konto GitHub wymaga osobnego klucza SSH, aby można było się nim uwierzytelniać.
 
-## 1. Utwórz klucze SSH dla każdego konta
+## Generowanie klucza SSH
 
-Każde konto GitHub wymaga osobnego klucza SSH, aby można było się nim uwierzytelniać.
-
-### Generowanie klucza SSH
-
-#### Dla pierwszego konta (prywatne):
+### Dla pierwszego konta (prywatne):
 ```bash
 ssh-keygen -t ed25519 -C "twoj_email1@domena.com"
 ```
@@ -16,7 +17,7 @@ Gdy poprosi o nazwę pliku, zapisz go np. jako:
 ~/.ssh/id_ed25519_osobiste
 ```
 
-#### Dla drugiego konta (służbowe / uczelniane):
+### Dla drugiego konta (służbowe / uczelniane):
 ```bash
 ssh-keygen -t ed25519 -C "sXXXXX@pjwstk.edu.pl"
 ```
@@ -106,6 +107,4 @@ W repozytorium możesz sprawdzić, które konto jest używane:
 git config user.name
 git config user.email
 ```
-
-Dzięki temu każde repozytorium będzie odpowiednio przypisane do właściwego konta. Powodzenia! 😊
-```
+</details>
