@@ -157,3 +157,56 @@ Pierwsza rzecz, którą należy zrobić, aby wdrożyć model [GitHub Flow](https
 - __Won’t have__ - Priorytet W (won’t) to zakres reprezentujący wymagania, których wiemy, że w danym projekcie nie będzie. Rzadziej wykorzystywany w celu dobitnego podkreślenia braku danej funkcjonalności. Domyślnie, jeśli wymaganie nie jest ustalone, to należy uznać, że nie będzie realizowane.
 
 </details>
+
+<details>
+   <summary>
+      Wersjonowanie semantyczne - SemVer
+   </summary>
+
+   ## Wersjonowanie semantyczne 
+   znane również jako [Semantic Versioning](https://semver.org/lang/pl/) albo SemVer. SemVer to standard wersjonowania oprogramowania. Numeracja wersji to sposób identyfikacji i odróżnienia różnych wersji oprogramowania. Każda nowa wersja otrzymuje unikalny numer, który pozwala nam śledzić i kontrolować zmiany. Dzięki numeracji wersji możemy stwierdzić, czy dana wersja oprogramowania jest aktualna, nowsza lub starsza. To szczególnie istotne przy wprowadzaniu zmian i udostępnianiu aktualizacji.
+   
+## Wersje składają się z trzech cyfr: X.Y.Z
+
+- __Major__ - Pierwsza liczba – 18 – reprezentuje numer wersji głównej (major). Jej zwiększenie (np. z 17 do 18) wskazuje na wprowadzenie istotnych modyfikacji, które mogą wpływać na istniejące funkcje i wymagać dostosowania.\
+__Przykład:__ Zmiana interfejsu użytkownika, nowe funkcjonalności, znaczne zmiany w strukturze kodu.
+
+- __Minor__ - Druga cyfra – 2 – to numer wersji mniejszej (minor). Zwiększenie tego numeru (np. z 18.1 do 18.2) wskazuje na wprowadzenie nowych funkcji oprogramowania bez wpływu na istniejące.\
+__Przykład:__ Dodanie nowego modułu, rozszerzenie istniejących funkcji, ulepszenie wydajności.
+
+- __Patch__ - Trzecia cyfra – 0 – reprezentuje numer wersji poprawki (patch). Zwiększenie numeru wersji patch (np. z 18.2.0 do 18.2.1) wskazuje na wprowadzenie poprawek bez zmian w funkcjonalności.\
+__Przykład:__ Naprawa znalezionych błędów, łatanie luk w zabezpieczeniach, poprawki interfejsu.
+
+W świecie programowania istnieje wiele bibliotek i modułów, które pomagają w tworzeniu aplikacji. Zarządzanie zależnościami jest kluczowe, aby nasz projekt działał sprawnie i był aktualny.
+
+## Deklarowanie zależności
+   W celu określenia wymaganych bibliotek i modułów w aplikacji javascript, korzystamy z pliku konfiguracyjnego package.json. W pliku tym możemy zadeklarować nazwy zależności oraz określić szczególne, minimalne lub maksymalne wersje, które nasz projekt obsługuje.
+```
+"dependencies": {
+   "reaact": "^18.2.0",
+   "@reduxjs/toolkit": "~1.9.5",
+   "axios": "1.4.0"
+}
+```
+W powyższym przykładzie widzimy deklarację trzech zależności:
+- react,
+- @reduxjs/toolkit,
+- axios.
+Przy każdej zależności możemy określić operator wersji, który pomoże nam zarządzać aktualizacjami.
+
+__Operator „^” (marchewka/caret)__ - Pozwala na aktualizację do najnowszej zgodnej zadeklarowanej wersji, zapewniając przy tym kompatybilność z nowymi funkcjonalnościami. Przykładowo, jeśli zadeklarujemy naszą bibliotekę React w następujący sposób „react”: „^18.1.0” to możemy być pewni, że podczas aktualizacji naszej aplikacji wersja biblioteki może być większa lub równa 18.1.0, ale też mniejsza od 19.0.0.
+
+__Operator „~” (tylda)__ - Umożliwia aktualizację do najnowszej wersji poprawiającej błędy, zachowując zgodność z deklaracją wersji. Przykładowo nasza biblioteka do obsługi stanu aplikacji zadeklarowana następująco „@reduxjs/toolkit”: „~1.8.4” będzie aktualizowana do wersji większej lub równej 1.8.4, ale mniejszej niż 1.9.0.
+
+## Aktualizowanie wersji
+Jest takie magiczne polecenie, które nie wszystkim jest znane, ale znacząco ułatwia proces podbijania wersji. Gdy po wprowadzeniu poprawek chcesz podbić wersję, np. modułu npm, masz do wyboru dwie metody. Możesz to zrobić na piechotę, zmieniając ręcznie plik package.json, albo skorzystać z polecenia npm version.
+
+Oto trzy przykłady, które pokazują, jak to działa w praktyce:
+- __npm version patch__ – zwiększa numer wersji poprawki. Przykład: 1.0.0 -> 1.0.1.
+- __npm version minor__ – zwiększa numer wersji mniejszej. Przykład: 1.0.0 -> 1.1.0.
+- __npm version major__ – zwiększa numer wersji głównej. Przykład: 1.0.0 -> 2.0.0.
+
+Polecenia te automatycznie aktualizują numer wersji w pliku package.json, a jako bonus tworzą nowy tag w repozytorium Git.
+
+
+</details>
