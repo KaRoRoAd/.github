@@ -210,3 +210,40 @@ Polecenia te automatycznie aktualizują numer wersji w pliku package.json, a jak
 
 
 </details>
+
+<details>
+   <summary>
+      Etapy wytwarzania oprogramowania
+   </summary>
+
+## Requirement analysis (określenie wymagań)
+ierwszym etapem jest określenie wymagań. Definiowane jest przez doświadczonych specjalistów, którzy wspierają się badaniami rynku i analizą konkurencji. Informacje zebrane w czasie analiz są wykorzystywane do planowania całego projektu, przeprowadzenia studium wykonalności czy analiza ryzyka. Po zaplanowaniu projektu ruszamy do zdefiniowania wartości naszego produktu, również przez określenie jego grupy docelowej. Posiadając te informacje, architekci oprogramowania mogą „przenieść” je do wirtualnego świata, projektując funkcjonalności naszej aplikacji.\
+
+__Przykładowe role:__ Project Manager, Product Manager, Business Analyst
+
+## Design (projekt)
+Drugi etap wytwarzania oprogramowania przenosi nas do części związanej z tworzeniem naszego produktu. To tutaj zapadają decyzje związane z interfejsem użytkownika. To, jakie kolory wykorzystamy, jak zaprojektujemy wygląd aplikacji. Gdzie będzie wyświetlał się nagłówek i czy urozmaicimy go animacją? Jakie ruchy wykona użytkownik, kiedy uruchomi aplikację po raz pierwszy i w którym miejscu będzie szukał danej funkcji? Jak będzie wyglądał przycisk logowania i w którym miejscu się znajdzie? Na tym etapie wybrany zostanie również język programowania, który najlepiej będzie pasować do aplikacji. Omówimy też inne aspekty techniczne – takie jak bazy danych i serwery. Wszystkie te elementy muszą być ustalone odpowiednio wcześniej między innymi ze względu na wielkość aplikacji. Portal, który działa na ogromną skalę i odwiedza go dziennie ponad miliard użytkowników, zaprojektowany jest inaczej od aplikacji mobilnej spełniającej pojedyńczą funkcję. Przykładowo Facebook jest bardzo potężną aplikacją o setkach funkcjonalności – dlatego wiele technicznych aspektów różni go od np. strony internetowej dla małej agencji SEO, której główne funkcjonalności opierają się na kalkulatorze cen dla klientów i formularzu kontaktowym.\
+
+__Przykładowe role:__ Architekt Aplikacji, UX, UI designer
+
+## Implementation (implementacja)
+Faza implementacji to czas kiedy pełną parą zaczynamy pisanie programu! Jest to bardzo ważny etap tworzenia oprogramowania. Czasami będzie to projekt wykonywany zupełnie od zera z całkiem nowym kodem (wtedy mówimy o tzw. green field development), czasami można wykorzystać elementy z innych, istniejących aplikacji (wtedy mamy do czynienia z tzw. legacy code). Programiści specjalizują się w różnych językach programowania, dlatego możemy ich podzielić na tych front-endowych (JavaScrpit, HTML, CSS, React.js, Angular etc.) czy back-endowych (Java, Scala, C, C++, C#.net etc.). Czasem poszukiwani są także Full Stack Developerzy – czyli tacy, którzy potrafią kodować zarówno po stronie klienta, jak i administrować serwerem czy bazą danych. Każda aplikacja ma zdefiniowany stack technologiczny, który powinien być dopasowany do głównych założeń oprogramowania.\
+
+__Przykładowe role:__ Software Engineer, Programista, Java Developer, Frontend Developer, C++ Developer itp.
+
+## Testing (testowanie)
+Następnym krokiem jest faza testowania. To świetny moment do tego, żeby upewnić się, że system działa właściwie. Aplikacja musi zostać sprawdzona pod wieloma kątami – funkcjonalności, optymalizacji czy wydajności. Jest to szczególnie istotne, jeśli produkt ma działać na większą skalę. Musimy się również upewnić, że oprogramowanie spełnia wymogi bezpieczeństwa. Testerzy sprawdzą, czy funkcjonalności i interfejsy działają prawidłowo. Mogą korzystać do tego z testów manualnych (użytkownik testujący „klikając” w aplikacji) lub automatycznych (tester tworzy kod testujący aplikację).
+Testowanie odbywa się również przez użytkowników, w czasie korzystania z oprogramowania. Dzięki informacjom zwrotnym produkt zawsze może być poprawiony i lepiej dopasowany do potrzeb. Często po wykryciu „buga” wracamy znów do poprzedniego kroku, i kod jest poprawiany.\
+
+__Przykładowe role:__ QA Specialist, tester oprogramowania, tester manualny, tester automatyzujący
+
+## Deployment (wdrożenie)
+Deployment to faza tworzenia oprogramowania, w której software jest gotowy do działania. Po dokładnym zaplanowaniu tego, jak będzie działać aplikacja, kodowaniu i upewnieniu się, że software pracuje jak należy, oprogramowanie „idzie na produkcję”. Co to w praktyce znaczy? Mówiąc najprościej – użytkownicy mogą już korzystać z aplikacji. Na początku tego etapu użytkownicy mogą wyłapywać jeszcze drobne błędy, które na bieżąco mogą być zgłoszone i korygowane.
+Aplikacje, czy np. strony internetowe też się zmieniają i zostają ulepszane. Widać to na przykładzie znanego wszystkim Facebooka, który dziś wygląda inaczej niż 5 lat temu. Jest to naturalne, ponieważ technologia się rozwija, pojawiają nowe funkcjonalności, zmienia się wizerunek firm czy trendy w designie. Dzięki innowacjom rozwijają się też wszystkie inne produkty i usługi.
+
+## Maintenance (utrzymanie)
+Ostatnią fazą jest faza utrzymania, czyli etap, kiedy aplikacja już działa. Korzystają z niej użytkownicy, widzimy, że spełnia swoje funkcje i jesteśmy zadowoleni z całego produktu. Nie możemy jednak stracić czujności – aplikacja wciąż może się zepsuć. W przypadku aplikacji webowych coś może funkcjonować źle na konkretnych przeglądarkach, software może też paść ofiarą złośliwego oprogramowania lub ataku hackera. Z czasem, kiedy z aplikacji będzie korzystać zbyt wielu użytkowników może pojawić się na przykład problem z obciążeniem serwerów. Wtedy trzeba to naprawić, wracając do działań podejmowanych na odpowiednim etapie cyklu rozwoju oprogramowania (w zależności od błędu/problemu). Często aplikacje nie będą wymagały dużych ingerencji ze strony programistów, ponieważ błędy będą dość proste w naprawie. Czasem wystarczy nawet wyjaśnić użytkownikowi w prosty sposób, jak sam może poradzić sobie z problemem. Wtedy wystarczy skorzystać z pomocy zespołów wspierających (supportowych).\
+
+__Przykładowe role:__ Support Engineer, I linia wsparcia, II linia wsparcia, IT Support.
+
+</details>
