@@ -289,6 +289,6 @@ ale większą wartość mają dla nas te, które wypisano po lewej.
       Rich Picture - Wzbogacony Wizerunek
    </summary>
 
-![Rich Picture] (https://rolandliedtke.me/images/RichPicture.png)
+![Rich Picture](https://rolandliedtke.me/images/RichPicture.png)
 
 </details>
