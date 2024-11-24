@@ -281,7 +281,11 @@ ale większą wartość mają dla nas te, które wypisano po lewej.
 ## Tablica Kanban
    Kanban to popularne ramy postępowania stosowane do wdrażania procesów programistycznych Agile i DevOps. Wymagają one informowania o potencjale wykonawczym w czasie rzeczywistym i zapewnienia pełnej przejrzystości pracy. Jednostki pracy są prezentowane w formie wizualnej na tablicy Kanban, umożliwiając członkom zespołu śledzenie stanu każdego elementu prac przez cały czas.
 
-   
+## Zasady DevOps
+   ![DevOps1](https://rolandliedtke.me/images/devopsGit.webp)
+   ![DevOps2](https://rolandliedtke.me/images/devops3.png)
+   ![DevOps3](https://rolandliedtke.me/images/devops2.png)
+   ![DevOps4](https://rolandliedtke.me/images/devops1.webp)
 </details>
 
 <details>
