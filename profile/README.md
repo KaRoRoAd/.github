@@ -217,7 +217,7 @@ Polecenia te automatycznie aktualizują numer wersji w pliku package.json, a jak
    </summary>
 
 ## Requirement analysis (określenie wymagań)
-ierwszym etapem jest określenie wymagań. Definiowane jest przez doświadczonych specjalistów, którzy wspierają się badaniami rynku i analizą konkurencji. Informacje zebrane w czasie analiz są wykorzystywane do planowania całego projektu, przeprowadzenia studium wykonalności czy analiza ryzyka. Po zaplanowaniu projektu ruszamy do zdefiniowania wartości naszego produktu, również przez określenie jego grupy docelowej. Posiadając te informacje, architekci oprogramowania mogą „przenieść” je do wirtualnego świata, projektując funkcjonalności naszej aplikacji.\
+Pierwszym etapem jest określenie wymagań. Definiowane jest przez doświadczonych specjalistów, którzy wspierają się badaniami rynku i analizą konkurencji. Informacje zebrane w czasie analiz są wykorzystywane do planowania całego projektu, przeprowadzenia studium wykonalności czy analiza ryzyka. Po zaplanowaniu projektu ruszamy do zdefiniowania wartości naszego produktu, również przez określenie jego grupy docelowej. Posiadając te informacje, architekci oprogramowania mogą „przenieść” je do wirtualnego świata, projektując funkcjonalności naszej aplikacji.\
 
 __Przykładowe role:__ Project Manager, Product Manager, Business Analyst
 
@@ -245,5 +245,50 @@ Aplikacje, czy np. strony internetowe też się zmieniają i zostają ulepszane.
 Ostatnią fazą jest faza utrzymania, czyli etap, kiedy aplikacja już działa. Korzystają z niej użytkownicy, widzimy, że spełnia swoje funkcje i jesteśmy zadowoleni z całego produktu. Nie możemy jednak stracić czujności – aplikacja wciąż może się zepsuć. W przypadku aplikacji webowych coś może funkcjonować źle na konkretnych przeglądarkach, software może też paść ofiarą złośliwego oprogramowania lub ataku hackera. Z czasem, kiedy z aplikacji będzie korzystać zbyt wielu użytkowników może pojawić się na przykład problem z obciążeniem serwerów. Wtedy trzeba to naprawić, wracając do działań podejmowanych na odpowiednim etapie cyklu rozwoju oprogramowania (w zależności od błędu/problemu). Często aplikacje nie będą wymagały dużych ingerencji ze strony programistów, ponieważ błędy będą dość proste w naprawie. Czasem wystarczy nawet wyjaśnić użytkownikowi w prosty sposób, jak sam może poradzić sobie z problemem. Wtedy wystarczy skorzystać z pomocy zespołów wspierających (supportowych).\
 
 __Przykładowe role:__ Support Engineer, I linia wsparcia, II linia wsparcia, IT Support.
+
+</details>
+
+<details>
+   <summary>
+      Założenia projektowe
+   </summary>
+
+   ## Metodologia Agile   
+   [Agile Manifesto](https://agilemanifesto.org/iso/pl/manifesto.html) W wyniku naszej pracy, zaczęliśmy bardziej cenić:
+
+__Ludzi i interakcje__ od procesów i narzędzi\
+__Działające oprogramowanie__ od szczegółowej dokumentacji\
+__Współpracę z klientem__ od negocjacji umów\
+__Reagowanie na zmiany__ od realizacji założonego planu.\
+
+Oznacza to, że elementy wypisane po prawej są wartościowe,
+ale większą wartość mają dla nas te, które wypisano po lewej.
+
+[Założenia Manifestu](https://agilemanifesto.org/iso/pl/principles.html):
+- Najwyższy priorytet ma dla nas zadowolenie klienta dzięki wczesnemu i ciągłemu wdrażaniu wartościowego oprogramowania.
+- Bądźcie gotowi na zmiany wymagań nawet na późnym etapie jego rozwoju. Procesy zwinne wykorzystują zmiany dla zapewnienia klientowi konkurencyjności.
+- Dostarczajcie funkcjonujące oprogramowanie często, w kilkutygodniowych lub kilkumiesięcznych odstępach. Im częściej, tym lepiej.
+- Zespoły biznesowe i deweloperskie muszą ściśle ze sobą współpracować w codziennej pracy przez cały czas trwania projektu.
+- Twórzcie projekty wokół zmotywowanych ludzi. Zapewnijcie im potrzebne środowisko oraz wsparcie i zaufajcie, że wykonają powierzone zadanie.
+- Najbardziej efektywnym i wydajnym sposobem przekazywania informacji zespołowi deweloperskiemu i wewnątrz niego jest rozmowa twarzą w twarz.
+- Działające oprogramowanie jest podstawową miarą postępu.
+- Procesy zwinne umożliwiają zrównoważony rozwój. Sponsorzy, deweloperzy oraz użytkownicy powinni być w stanie utrzymywać równe tempo pracy.
+- Ciągłe skupienie na technicznej doskonałości i dobrym projektowaniu zwiększa zwinność.
+- Prostota – sztuka minimalizowania ilości koniecznej pracy – jest kluczowa.
+- Najlepsze rozwiązania architektoniczne, wymagania i projekty pochodzą od samoorganizujących się zespołów.
+- W regularnych odstępach czasu zespół analizuje możliwości poprawy swojej wydajności, a następnie dostraja i dostosowuje swoje działania do wyciągniętych wniosków.
+
+## Tablica Kanban
+   Kanban to popularne ramy postępowania stosowane do wdrażania procesów programistycznych Agile i DevOps. Wymagają one informowania o potencjale wykonawczym w czasie rzeczywistym i zapewnienia pełnej przejrzystości pracy. Jednostki pracy są prezentowane w formie wizualnej na tablicy Kanban, umożliwiając członkom zespołu śledzenie stanu każdego elementu prac przez cały czas.
+
+   
+</details>
+
+<details>
+   <summary>
+      Rich Picture - Wzbogacony Wizerunek
+   </summary>
+
+![Rich Picture] (https://rolandliedtke.me/images/RichPicture.png)
 
 </details>
