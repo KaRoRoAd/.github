@@ -299,7 +299,6 @@ Kanban to popularne ramy postępowania stosowane do wdrażania procesów program
       3. DevOps
    </summary>
    
-   ![DevOps1](https://rolandliedtke.me/images/devopsGit.webp)
    ![DevOps2](https://rolandliedtke.me/images/devops3.png)
    ![DevOps3](https://rolandliedtke.me/images/devops2.png)
    ![DevOps4](https://rolandliedtke.me/images/devops1.webp)
@@ -356,9 +355,57 @@ Podczas tworzenia pipeline'u CI/CD rozważ przeprowadzenie wdrożenia w wielu ś
 
 <details>
    <summary>
+      CI/CD
+   </summary>
+
+   ### Co to jest Github Actions?
+Github Actions jest narzędziem do tworzenia skryptów CI/CD. Jesteśmy w stanie puszczać testy, sprawdzać jakość naszej aplikacji, budować ja i robić deploy na odpowiednie środowiska. Jest dostępny dla każdego repozytorium w Github. Możesz z niego korzystać dla dowolnego języka np.: JavaScript, PHP, Python, Java itd.
+</details>
+
+<details>
+   <summary>
       Rich Picture - Wzbogacony Wizerunek
    </summary>
 
 ![Rich Picture](https://rolandliedtke.me/images/RichPicture.png)
 
+</details>
+
+<details>
+   <summary>
+      Wybrane Narzędzia i Technologie
+   </summary>
+
+   ## Narzędzia i Technologie:
+   - __Plan:__ GitHub Projects Kanban Board
+   - __VCS (Version Control System):__ git
+   - __Source Code:__ GitHub Repository
+   - __Mobile Framework:__ React Native
+   - __Mobile IDE (Integrated Development Environment):__ Android Studio & Xcode
+   - __UI (User Interface):__ Figma
+   - __CI (Continuous Integration):__ GitHub Actions
+</details>
+
+<details>
+   <summary>
+      Orientacyjny koszt oraz estymacja projektu
+   </summary>
+   
+   __Zespół projektowy:__ 4 osoby\
+   __Stawka:__ 
+      - Stażysta (Sophomore Student 2nd year) - 30 zł brutto / rbh (najniższa stawka godzinowa od 1 lipca 2024 roku 28,10 zł)\
+      - Junior (Junior Student 3rd year) - 40 zł brutto / rbh
+      - Mid (Senior Student 4rd year) - 50 zł brutto / rbh
+      - Regular - 60 zł brutto / rbh
+   __Czas pracy członka zespołu na zjazd:__ 3h (ćwiczenia BYT) + 2h (wykłady BYT) + 2h (spotkanie MS Teams) - !! UWAGA: Co 2 tygodnie !!\
+   __Ilość zjazdów:__ 8
+
+   __Szacunkowa kwota:__ 
+      - 4 Stażysta = 4os * 30rbh * 7h * 8z = __6720 zł brutto__
+      - 2 Stażysta + 2 Junior = (30rbh + 40rbh) * (2os * 7h * 8z) = __7840 zł brutto__
+      - 4 Junior = 4os * 40rbh * 7h * 8z = __8960 zł brutto__
+      - 2 Junior + 2 Mid = (40rbh + 50rbh) * (2os * 7h * 8z) = __10 080 zł brutto__
+      - 4 Mid = 4os * 50rbh * 7h * 8z = __11 200 zł brutto__
+      - 2 Mid + 2 Regular = (50rbh + 60rbh) * (2os * 7h * 8z) = __12 320 zł brutto__
+      - 4 Regular =  4os * 60rbh * 7h * 8z = __13 440 zł brutto__
 </details>
