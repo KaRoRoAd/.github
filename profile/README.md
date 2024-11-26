@@ -281,11 +281,58 @@ ale większą wartość mają dla nas te, które wypisano po lewej.
 ## Tablica Kanban
    Kanban to popularne ramy postępowania stosowane do wdrażania procesów programistycznych Agile i DevOps. Wymagają one informowania o potencjale wykonawczym w czasie rzeczywistym i zapewnienia pełnej przejrzystości pracy. Jednostki pracy są prezentowane w formie wizualnej na tablicy Kanban, umożliwiając członkom zespołu śledzenie stanu każdego elementu prac przez cały czas.
 
-## Zasady DevOps
+## 8 kroków do DevOps
    ![DevOps1](https://rolandliedtke.me/images/devopsGit.webp)
    ![DevOps2](https://rolandliedtke.me/images/devops3.png)
    ![DevOps3](https://rolandliedtke.me/images/devops2.png)
    ![DevOps4](https://rolandliedtke.me/images/devops1.webp)
+
+### Krok 1 — Wybór komponentu
+Pierwszym krokiem jest rozpoczęcie od małej skali. Wybierz komponent, który jest obecnie w fazie produkcji. Idealny komponent ma prostą bazę kodu z niewieloma zależnościami i minimalną infrastrukturą. Komponent ten będzie poligonem doświadczalnym, na którym zespół może przećwiczyć wdrażanie DevOps.
+
+### Krok 2 — Przeanalizowanie możliwości zastosowania metodologii Agile takiej jak Scrum
+DevOps często stosowane jest w połączeniu z metodologią pracy Agile, taką jak Scrum. Nie ma potrzeby wdrażania wszystkich rytuałów i praktyk związanych z metodą taką jak Scrum. Trzy elementy Scrum, które zasadniczo są łatwe do wdrożenia i szybko dostarczają wartość, to backlog, sprint i planowanie sprintu.
+
+Zespół DevOps może dodawać i nadawać priorytety pracy w backlogu Scrum, a następnie wprowadzać podzbiór tej pracy do sprintu, czyli ustalonego czasu na ukończenie określonej części pracy. Planowanie sprintu polega na decydowaniu o tym, jakie zadania przechodzą z backlogu zaległości do następnego sprintu.
+
+### Krok 3 — Użycie kontroli źródła opartego na GIT
+Kontrola wersji to najlepsza praktyka DevOps, która umożliwia lepszą współpracę i skrócenie cykli wydawania. Narzędzia takie jak Bitbucket umożliwiają programistom udostępnianie, współpracę, scalanie i tworzenie kopii zapasowych oprogramowania.
+
+Wybierz model tworzenia gałęzi. Zarys tej koncepcji przedstawiono w tym artykule. Przepływ GitHub jest doskonałym punktem wyjścia dla zespołów zaczynających pracę z Git, ponieważ łatwo go zrozumieć i wdrożyć. Często preferowanym rozwiązaniem jest tworzenie oprogramowania w oparciu o gałąź główną, ale wymaga ono większej dyscypliny i komplikuje pierwsze kroki z Git.
+
+### Krok 4 — Zintegrowanie kontroli źródła ze śledzeniem pracy
+Zintegruj narzędzie do kontroli źródła z narzędziem do śledzenia pracy. Dzięki temu, że w jednym miejscu można zobaczyć wszystko, co jest związane z danym projektem, programiści i menedżerowie zaoszczędzą sporo czasu. Poniżej znajduje się przykład zgłoszenia Jira z aktualizacjami z repozytorium kontroli źródła opartego na Git. Zgłoszenia Jira obejmują sekcję tworzenia oprogramowania, która łączy pracę wykonaną dla zgłoszenia Jira w kontroli źródła. To zgłoszenie miało jedną gałąź, sześć commitów, jeden pull request i jedną kompilację.
+
+Zrzut ekranu przedstawiający integrację kontroli źródła ze śledzeniem pracy
+Zagłębiając się w sekcję programistyczną zgłoszenia Jira, można znaleźć dodatkowe szczegóły. Karta commitów zawiera listę wszystkich commitów powiązanych ze zgłoszeniem Jira.
+
+Zrzut ekranu przedstawiający integrację kontroli źródła ze śledzeniem pracy
+W tej sekcji wymieniono wszystkie pull requesty powiązane ze zgłoszeniem Jira.
+
+Zrzut ekranu przedstawiający integrację kontroli źródła ze śledzeniem pracy
+Kod związany z tym zgłoszeniem Jira jest wdrażany we wszystkich środowiskach wymienionych w sekcji Wdrożenia. Integracje te zwykle działają poprzez dodanie identyfikatora zgłoszenia Jira — w tym przypadku IM-202 — w celu zatwierdzenia komunikatów i nazw gałęzi pracy związanej ze zgłoszeniem Jira.
+
+Zrzut ekranu przedstawiający integrację kontroli źródła ze śledzeniem pracy
+Dostępna jest karta kodu, która zawiera łącza do wszystkich repozytoriów kontroli źródła związanych z projektem. Pomaga to programistom znaleźć kod, nad którym muszą pracować, gdy przypisują się do zgłoszenia Jira.
+
+Zrzut ekranu przedstawiający integrację kontroli źródła ze śledzeniem pracy
+
+### Krok 5 — Napisanie testów
+Pipeline'y CI/CD wymagają testów, aby sprawdzić, czy kod wdrożony w różnych środowiskach działa poprawnie. Zacznij od napisania testów jednostkowych dla kodu. Ambitnym celem jest 90 procent pokrycia kodu, ale gdy dopiero zaczynasz, jest to nierealne. Wyznacz niski poziom bazowy dla pokrycia kodu i stopniowo z biegiem czasu zwiększaj poprzeczkę dla pokrycia testów jednostkowych. W tym celu możesz dodać jednostki pracy do backlogu.
+
+Stosuj programowanie sterowane testami podczas naprawiania błędów znalezionych w kodzie produkcyjnym. Kiedy znajdziesz błąd, napisz testy jednostkowe, testy integracyjne i/lub systemowe, które kończą się niepowodzeniem w środowiskach, w których ten błąd występuje. Następnie napraw błąd i zobacz, czy testy kończą się teraz powodzeniem. Ten proces w sposób naturalny pozwoli z czasem zwiększyć pokrycie kodu. Jeśli błąd został wychwycony w środowisku testowym lub przejściowym, testy dadzą Ci pewność, że kod działa poprawnie, gdy zostanie przeniesiony do produkcji.
+
+Gdy zaczynasz od początku, ten krok jest co prawda pracochłonny, ale ważny. Testowanie pozwala zespołom zobaczyć wpływ zmian kodu na zachowanie systemu przed wdrożeniem tych zmian u użytkowników końcowych.
+
+- __Testy jednostkowe__ sprawdzają, czy kod źródłowy jest poprawny i powinien być uruchamiany jako jeden z pierwszych kroków w pipelinie CI/CD. Deweloperzy powinni napisać testy dla zielonej ścieżki, problematycznych wejść i znanych przypadków narożnych. Podczas pisania testów programiści mogą symulować dane wyjściowe i oczekiwane dane wyjściowe.
+
+- __Testy integracyjne__ pozwalają na sprawdzenie, czy dwa komponenty komunikują się ze sobą poprawnie. Można symulować dane wyjściowe i oczekiwane dane wyjściowe. Testy te są jednym z pierwszych kroków pipeline'u CI/CD przed wdrożeniem w dowolnym środowisku. Testy te zazwyczaj wymagają szerzej zakrojonych symulacji niż testy jednostkowe.
+
+- __Testy systemowe__ sprawdzają kompleksową wydajność systemu i dają pewność, że system działa zgodnie z oczekiwaniami w każdym środowisku. Symuluj dane wejściowe, które może otrzymać komponent, i uruchom system. Następnie sprawdź, czy system zwraca wymagane wartości i poprawnie aktualizuje pozostałą część systemu. Testy te powinny być uruchamiane po wdrożeniu w każdym środowisku.
+
+### Krok 6 — Tworzenie procesu CI/CD w celu wdrożenia komponentu
+Podczas tworzenia pipeline'u CI/CD rozważ przeprowadzenie wdrożenia w wielu środowiskach. Kod zostanie zapisany na stałe, jeśli zespół buduje pipeline CI/CD, który jest wdrażany tylko do jednego środowiska. Ważne jest tworzenie pipeline'ów CI/CD dla infrastruktury i kodu. Zacznij od stworzenia pipeline'u CI/CD, aby wdrożyć niezbędną infrastrukturę w każdym środowisku. Następnie stwórz kolejny pipeline CI/CD, aby wdrożyć kod.
+
 </details>
 
 <details>
