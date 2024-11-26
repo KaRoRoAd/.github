@@ -392,15 +392,15 @@ Github Actions jest narzędziem do tworzenia skryptów CI/CD. Jesteśmy w stanie
    </summary>
    
    __Zespół projektowy:__ 4 osoby\
-   __Stawka:__ 
+   __Stawka:__\
       - Stażysta (Sophomore Student 2nd year) - 30 zł brutto / rbh (najniższa stawka godzinowa od 1 lipca 2024 roku 28,10 zł)\
-      - Junior (Junior Student 3rd year) - 40 zł brutto / rbh
-      - Mid (Senior Student 4rd year) - 50 zł brutto / rbh
-      - Regular - 60 zł brutto / rbh
+      - Junior (Junior Student 3rd year) - 40 zł brutto / rbh\
+      - Mid (Senior Student 4rd year) - 50 zł brutto / rbh\
+      - Regular - 60 zł brutto / rbh\
    __Czas pracy członka zespołu na zjazd:__ 3h (ćwiczenia BYT) + 2h (wykłady BYT) + 2h (spotkanie MS Teams) - !! UWAGA: Co 2 tygodnie !!\
    __Ilość zjazdów:__ 8
 
-   __Szacunkowa kwota:__ 
+   __Szacunkowa kwota:__\
       - 4 Stażysta = 4os * 30rbh * 7h * 8z = __6720 zł brutto__\
       - 2 Stażysta + 2 Junior = (30rbh + 40rbh) * (2os * 7h * 8z) = __7840 zł brutto__\
       - 4 Junior = 4os * 40rbh * 7h * 8z = __8960 zł brutto__\
