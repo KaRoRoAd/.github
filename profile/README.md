@@ -401,11 +401,11 @@ Github Actions jest narzędziem do tworzenia skryptów CI/CD. Jesteśmy w stanie
    __Ilość zjazdów:__ 8
 
    __Szacunkowa kwota:__ 
-      - 4 Stażysta = 4os * 30rbh * 7h * 8z = __6720 zł brutto__
-      - 2 Stażysta + 2 Junior = (30rbh + 40rbh) * (2os * 7h * 8z) = __7840 zł brutto__
-      - 4 Junior = 4os * 40rbh * 7h * 8z = __8960 zł brutto__
-      - 2 Junior + 2 Mid = (40rbh + 50rbh) * (2os * 7h * 8z) = __10 080 zł brutto__
-      - 4 Mid = 4os * 50rbh * 7h * 8z = __11 200 zł brutto__
-      - 2 Mid + 2 Regular = (50rbh + 60rbh) * (2os * 7h * 8z) = __12 320 zł brutto__
-      - 4 Regular =  4os * 60rbh * 7h * 8z = __13 440 zł brutto__
+      - 4 Stażysta = 4os * 30rbh * 7h * 8z = __6720 zł brutto__\
+      - 2 Stażysta + 2 Junior = (30rbh + 40rbh) * (2os * 7h * 8z) = __7840 zł brutto__\
+      - 4 Junior = 4os * 40rbh * 7h * 8z = __8960 zł brutto__\
+      - 2 Junior + 2 Mid = (40rbh + 50rbh) * (2os * 7h * 8z) = __10 080 zł brutto__\
+      - 4 Mid = 4os * 50rbh * 7h * 8z = __11 200 zł brutto__\
+      - 2 Mid + 2 Regular = (50rbh + 60rbh) * (2os * 7h * 8z) = __12 320 zł brutto__\
+      - 4 Regular =  4os * 60rbh * 7h * 8z = __13 440 zł brutto__\
 </details>
