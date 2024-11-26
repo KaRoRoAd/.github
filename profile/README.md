@@ -256,7 +256,7 @@ __Przykładowe role:__ Support Engineer, I linia wsparcia, II linia wsparcia, IT
 
    <details>
       <summary>
-         Metodologia Agile
+         1. Metodologia Agile
       </summary>
 
    [Agile Manifesto](https://agilemanifesto.org/iso/pl/manifesto.html) W wyniku naszej pracy, zaczęliśmy bardziej cenić:
@@ -264,7 +264,7 @@ __Przykładowe role:__ Support Engineer, I linia wsparcia, II linia wsparcia, IT
 __Ludzi i interakcje__ od procesów i narzędzi\
 __Działające oprogramowanie__ od szczegółowej dokumentacji\
 __Współpracę z klientem__ od negocjacji umów\
-__Reagowanie na zmiany__ od realizacji założonego planu.\
+__Reagowanie na zmiany__ od realizacji założonego planu.
 
 Oznacza to, że elementy wypisane po prawej są wartościowe,
 ale większą wartość mają dla nas te, które wypisano po lewej.
@@ -284,11 +284,21 @@ ale większą wartość mają dla nas te, które wypisano po lewej.
 - W regularnych odstępach czasu zespół analizuje możliwości poprawy swojej wydajności, a następnie dostraja i dostosowuje swoje działania do wyciągniętych wniosków.
    </details>
    
+<details>
+   <summary>
+      2. Tablica Kanban
+   </summary>
 
-## Tablica Kanban
-   Kanban to popularne ramy postępowania stosowane do wdrażania procesów programistycznych Agile i DevOps. Wymagają one informowania o potencjale wykonawczym w czasie rzeczywistym i zapewnienia pełnej przejrzystości pracy. Jednostki pracy są prezentowane w formie wizualnej na tablicy Kanban, umożliwiając członkom zespołu śledzenie stanu każdego elementu prac przez cały czas.
+Kanban to popularne ramy postępowania stosowane do wdrażania procesów programistycznych Agile i DevOps. Wymagają one informowania o potencjale wykonawczym w czasie rzeczywistym i zapewnienia pełnej przejrzystości pracy. Jednostki pracy są prezentowane w formie wizualnej na tablicy Kanban, umożliwiając członkom zespołu śledzenie stanu każdego elementu prac przez cały czas.
+</details>
 
-## 8 kroków do DevOps
+  
+
+<details>
+   <summary>
+      3. DevOps
+   </summary>
+   
    ![DevOps1](https://rolandliedtke.me/images/devopsGit.webp)
    ![DevOps2](https://rolandliedtke.me/images/devops3.png)
    ![DevOps3](https://rolandliedtke.me/images/devops2.png)
@@ -339,6 +349,8 @@ Gdy zaczynasz od początku, ten krok jest co prawda pracochłonny, ale ważny. T
 
 ### Krok 6 — Tworzenie procesu CI/CD w celu wdrożenia komponentu
 Podczas tworzenia pipeline'u CI/CD rozważ przeprowadzenie wdrożenia w wielu środowiskach. Kod zostanie zapisany na stałe, jeśli zespół buduje pipeline CI/CD, który jest wdrażany tylko do jednego środowiska. Ważne jest tworzenie pipeline'ów CI/CD dla infrastruktury i kodu. Zacznij od stworzenia pipeline'u CI/CD, aby wdrożyć niezbędną infrastrukturę w każdym środowisku. Następnie stwórz kolejny pipeline CI/CD, aby wdrożyć kod.
+
+</details>
 
 </details>
 
