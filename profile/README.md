@@ -14,7 +14,7 @@ ssh-keygen -t ed25519 -C "twoj_email1@domena.com"
 ```
 Gdy poprosi o nazwę pliku, zapisz go np. jako:
 ```bash
-~/.ssh/id_ed25519_osobiste
+~/.ssh/id_ed25519_personal
 ```
 
 ### Dla drugiego konta (służbowe / uczelniane):
@@ -31,7 +31,7 @@ Zapisz go np. jako:
 Aktywuj klucze:
 ```bash
 eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519_osobiste
+ssh-add ~/.ssh/id_ed25519_personal
 ssh-add ~/.ssh/id_ed25519_pjatk
 ```
 
@@ -40,7 +40,7 @@ ssh-add ~/.ssh/id_ed25519_pjatk
 1. Skopiuj klucze publiczne:
    - **Osobisty**:
      ```bash
-     cat ~/.ssh/id_ed25519_osobiste.pub
+     cat ~/.ssh/id_ed25519_personal.pub
      ```
    - **Służbowy**:
      ```bash
@@ -55,14 +55,16 @@ ssh-add ~/.ssh/id_ed25519_pjatk
 
 Aby `git` wiedział, którego klucza używać, skonfiguruj plik `~/.ssh/config`:
 ```bash
-Host github.com-osobisty
+Host github.com-personal
   HostName github.com
-  User git
-  IdentityFile ~/.ssh/id_ed25519_osobiste
+  ServerAliveInterval 60
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519_personal
 
 Host github.com-pjatk
   HostName github.com
-  User git
+  ServerAliveInterval 60
+  AddKeysToAgent yes
   IdentityFile ~/.ssh/id_ed25519_pjatk
 ```
 
@@ -91,7 +93,7 @@ Podczas klonowania repozytorium upewnij się, że używasz odpowiedniego aliasu 
 
 - **Dla konta osobistego**:
   ```bash
-  git clone git@github.com-osobisty:username/repo.git
+  git clone git@github.com-personal:username/repo.git
   ```
 - **Dla konta służbowego**:
   ```bash
@@ -107,6 +109,12 @@ W repozytorium możesz sprawdzić, które konto jest używane:
 git config user.name
 git config user.email
 ```
+
+Lub sprawdzić na które konto jesteś zalogowany:
+```
+ssh -T git@github-personal
+```
+
 </details>
 
 
