@@ -358,8 +358,34 @@ Podczas tworzenia pipeline'u CI/CD rozważ przeprowadzenie wdrożenia w wielu ś
       CI/CD
    </summary>
 
-   ### Co to jest Github Actions?
+### Co to jest Github Actions?
 Github Actions jest narzędziem do tworzenia skryptów CI/CD. Jesteśmy w stanie puszczać testy, sprawdzać jakość naszej aplikacji, budować ja i robić deploy na odpowiednie środowiska. Jest dostępny dla każdego repozytorium w Github. Możesz z niego korzystać dla dowolnego języka np.: JavaScript, PHP, Python, Java itd.
+
+### Czym jest GitHub workflow?
+Na początek zapoznajmy się z podstawową terminologią. Będziemy się uczyć z góry na dół, zaczynając od ogólnych konceptów i przechodząc do detali.
+- __Workflow__ to zautomatyzowany proces, który uruchamia jedną lub więcej prac (job). Możesz go skonfigurować dodając plik konfiguracyjny YAML w folderze .github/workflows. Składni przyjrzymy się w następnych sekcjach.
+
+- __Job__ to zestaw kroków definiujący przepływ pracy. Kroki mogą uruchamiać komendy, konfigurować zadania lub wywoływać akcje GitHub. Domyślnie, prace działają równolegle, ale możesz skonfigurować je, aby uruchamiały się sekwencyjnie.
+
+- __Action__ to pojedynczy krok wewnątrz pracy. Jest to aplikacja dla platformy GitHub Actions, która wykonuje często powtarzające się zadania. Możesz stworzyć swoje niestandardowe akcje lub znaleźć wiele gotowych do użycia na GitHub Marketplace.
+
+- __Runner__ to serwer uruchamiający workflow w odpowiednim momencie. Każda praca w workflow jest uruchamiana w nowym wirtualnym środowisku. GitHub zarządza tymi serwerami i oferuje trzy główne systemy operacyjne: Ubuntu, Windows i macOS.
+
+### Jak działają GitHub Actions?
+GitHub emituje zdarzenia (events), gdy coś się dzieje “w” lub “w stosunku do” twojego repozytorium - jak np. otworzenie PR lub issue. W odpowiedzi na te zdarzenia, możesz uruchamiać akcje GitHub. Te akcje to są również repozytoria. Ogólnie, przypomina to bazującą na zdarzeniach naturę JavaScriptu. Ogólna idea jest zatem prosta:
+- Nasłuchuj na event
+- Uruchom odpowiedni workflow
+
+### Składnia pliku konfigurującego workflow
+Tak jak wspomniałem, potrzebujesz pliku YAML, żeby skonfigurować workflow. Przyjrzyjmy się strukturze takiego pliku.
+- __name__ - nazwa workflow. Strona z akcjami w repozytorium ją wyświetli.
+- __on__ - nazwa zdarzenia, które wywołuje workflow, np. push lub pull_request. Istnieje cała lista zdarzeń na stronie GitHub events.
+- __jobs__ - sekcja, gdzie umieszczasz pojedyncze prace.
+- __job-name__ - nazwa zadania, którą możesz edytować. Pod tym kluczem, umieszczasz listę kroków. Każdy krok może:
+   - Mieć nazwę - name.
+   - Używać zdefiniowanej akcji - uses.
+   - Uruchomić komendę w terminalu - run.
+   - Być uruchomiony z dodatkowymi parametrami - with.
 </details>
 
 <details>
